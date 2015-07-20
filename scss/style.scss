@@ -47,15 +47,16 @@ aside.quickInfo {
     a{
       display: inline-block;
       border-radius: 50%;
+      min-width: 4em;
       border: 1px solid $mainColor;
       margin: 1em;
       color: black;
-      transition: all .3s ease;
       &:hover i, &:focus i {
-        transform: rotate(20deg);
+        animation-name: spin;
+        animation-duration: .8s;
+        animation-timing-function: ease-in-out;
       }
       i {
-        transition: all .3s ease;
         padding: .5em;
       }
     }
@@ -64,6 +65,10 @@ aside.quickInfo {
 
 
 
+@keyframes spin {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
 
 @media (min-width: 768px) {
   main.contentPane {
