@@ -4,5 +4,6 @@
   <div class='repo' ng-repeat="repo in repoData | orderBy: '-created_at': reverse">
     <h2><a href="{{repo.html_url}}">{{repo.name}}</a></h2>
     <p>{{repo.description}}</p>
+    <p ng-show='repo.language'>Main language: {{repo.language}}</p>
     <span>Created on: <time>{{repo.created_at | date}}</time></span>
   </div>
