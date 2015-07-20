@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Todd Robinson</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -12,9 +14,30 @@
   <script src="https://code.angularjs.org/1.4.2/angular-route.min.js" ></script>
 </head>
 <body ng-app="trApp">
-  <aside ng-view>
+  <div class="container">
+    <div class="row">
 
-  </aside>
+      <aside class="col-md-6 col-sm-6 quickInfo">
+        <h1>Todd Robinson</h1>
+        <ul class="nav navs-stacked">
+          <li><a href="#/">Hello!</a></li>
+          <li><a href="#/about">About</a></li>
+          <li><a href="#/repos">GitHub Repositories</a></li>
+        </ul>
+        <hr>
+        <section class="social">
+          <a target='_blank' href="http://github.com/ToddRobinson/"><i class="fa fa-github fa-3x"></i></a>
+          <a target='_blank' href="http://codepen.io/ToddSRobinson/"><i class="fa fa-codepen fa-3x"></i></a>
+          <a target='_blank' href="https://www.linkedin.com/in/toddsrobinson"><i class="fa fa-linkedin fa-3x"></i></a>
+        </section>
+
+
+      </aside>
+      <main ng-view class="col-md-6 col-sm-6 contentPane">
+
+      </main>
+    </div>
+</div>
 <!-- Modules -->
 <script src="js/app.js" ></script>
 

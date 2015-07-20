@@ -2,14 +2,19 @@ var app = angular.module('trApp', ['ngRoute']);
 
 app.config(function($routeProvider){
   $routeProvider
-  .when('/', {
+  .when('/repos', {
     controller: 'MainController',
-    templateUrl: 'views/home.html'
+    templateUrl: 'views/repos.html'
 
   })
   .when('/about', {
     controller: 'MainController',
-    templateUrl: 'viws/about.html'
+    templateUrl: 'views/about.html'
+  })
+
+  .when('/',{
+    controller: 'MainController',
+    templateUrl: 'views/intro.html'
   })
 
   .otherwise({

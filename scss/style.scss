@@ -1,11 +1,73 @@
-body {
-   margin: 0;
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic|Open+Sans:600italic,600);
+
+$mainColor: #e74c3c;
+
+@mixin centered() {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-button {
-   color: red;
-   &:hover {
-   color: #ffffff;
-   }
+body {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Gentium Basic', serif;
+  font-size: 16px;
+}
 
+
+main.contentPane {
+  padding-bottom: 1rem;
+  div.repo:not(:last-child) {
+    border-bottom: 1px solid grey;
+    padding: 0 0 1.5em 0;
+  }
+
+}
+
+h1, h2,h3,h4,h5,h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: $mainColor;
+  &:hover, &:focus {
+    color: darken($mainColor, .2);
+  }
+}
+
+
+aside.quickInfo {
+  ul.nav {
+    font-size: 1.5em;
+  }
+  .social  {
+    text-align: center;
+    @include centered;
+    a{
+      display: inline-block;
+      border-radius: 50%;
+      border: 1px solid $mainColor;
+      margin: 1em;
+      color: black;
+      transition: all .3s ease;
+      &:hover i, &:focus i {
+        transform: rotate(20deg);
+      }
+      i {
+        transition: all .3s ease;
+        padding: .5em;
+      }
+    }
+  }
+}
+
+
+
+
+@media (min-width: 768px) {
+  main.contentPane {
+    overflow-y: auto;
+    max-height: 95vh;
+  }
 }

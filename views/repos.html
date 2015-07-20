@@ -1,0 +1,5 @@
+  <div class='repo' ng-repeat="repo in repoData">
+    <h2><a href="{{repo.html_url}}">{{repo.name}}</a></h2>
+    <p>{{repo.description}}</p>
+    <span>Created on: <time>{{repo.created_at | date}}</time></span>
+  </div>
