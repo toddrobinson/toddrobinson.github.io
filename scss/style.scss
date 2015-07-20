@@ -63,7 +63,13 @@ aside.quickInfo {
   }
 }
 
-
+#contact {
+  span:not(:last-child)::after {
+    content: '|';
+    display: inline-block;
+    margin: 0 .5em 0 .5em;
+  }
+}
 
 @keyframes spin {
   from {transform: rotateY(0deg);}
