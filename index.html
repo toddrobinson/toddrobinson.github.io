@@ -8,36 +8,39 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
   <!-- Angular -->
   <script src="https://code.angularjs.org/1.4.2/angular.min.js"></script>
   <!-- Angular Router -->
   <script src="https://code.angularjs.org/1.4.2/angular-route.min.js" ></script>
 </head>
 <body ng-app="trApp" id="toddRobinson">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
 
-      <header class="col-md-6 col-sm-6 quickInfo">
+      <header class="col-md-12 col-sm-12 quickInfo">
         <h1>Todd S. Robinson</h1>
         <ul class="nav navs-stacked">
           <li><a href="#/">Hello!</a></li>
           <li><a href="#/about">About</a></li>
           <li><a href="#/repos">GitHub Repositories</a></li>
         </ul>
-        <hr>
         <section id="social">
           <a  href="http://github.com/ToddRobinson/"><i class="fa fa-github fa-2x"></i></a>
           <a  href="http://codepen.io/ToddSRobinson/"><i class="fa fa-codepen fa-2x"></i></a>
           <a  href="https://www.linkedin.com/in/toddsrobinson"><i class="fa fa-linkedin fa-2x"></i></a>
         </section>
-
-
       </header>
-      <main ng-view class="col-md-6 col-sm-6 contentPane">
+  </div>
+</div> <!-- End .container-fluid -->
 
-      </main>
-    </div>
-</div>
+      <div class="container">
+        <main ng-view class="col-md-12 col-sm-12 contentPane">
+
+        </main>
+      </div>
+<p class="text-center"><small>Todd S. Robinson 2015</small></p>
 <!-- Modules -->
 <script src="js/app.js" ></script>
 
