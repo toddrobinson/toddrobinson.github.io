@@ -31,4 +31,9 @@ app.config(function($routeProvider){
   .otherwise({
     redirectTo: '/'
   });
+
+});
+
+$("ul.nav li a ").on("click" , function(){
+  $('body').scrollTo('.contentPane', 800);
 });
