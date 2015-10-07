@@ -1,5 +1,5 @@
 /**
- * Service to pull information from Github apu for user 'toddrobinson'
+ * Service to pull information from Github api for user 'toddrobinson'
  * @param  {string} 'repos'          [Title of service, to be used elsewhere.]
  * @param  {string} ['$http'         [Http dependency]
  * @return {object}                  [Return data from api on success, return error message on failure]
