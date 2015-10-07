@@ -8,14 +8,13 @@ $mainColor: #e74c3c;
 }
 
 body {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-family: 'Gentium Basic', serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
 
 
 main.contentPane {
+  min-height: 80vh;
   padding-bottom: 1rem;
   section.repo:not(:last-child) {
     border-bottom: 1px solid grey;
@@ -25,7 +24,6 @@ main.contentPane {
 }
 
 h1, h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
 }
 
@@ -38,8 +36,27 @@ a {
 
 
 header.quickInfo {
+  background-color: $mainColor;
+  color: rgba(236, 240, 241,1.0);
+  min-height: 100vh;
+  padding-top: 20vh;
+  @include centered;
+  text-align: center;
   ul.nav {
     font-size: 1.5em;
+    color: rgba(236, 240, 241,1.0);
+    li:hover {
+      background-color: inherit;
+      color: inherit;
+    }
+    a {
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: inherit;
+      &:hover, &:focus {
+        background-color: inherit;
+      }
+    }
   }
   #social  {
     text-align: center;
@@ -48,9 +65,8 @@ header.quickInfo {
       display: inline-block;
       border-radius: 50%;
       min-width: 4em;
-      border: 1px solid $mainColor;
       margin: 1em;
-      color: black;
+      color: rgba(236, 240, 241,1.0);
       &:hover i, &:focus i {
         animation-name: spin;
         animation-duration: .8s;
@@ -78,7 +94,5 @@ header.quickInfo {
 
 @media (min-width: 768px) {
   main.contentPane {
-    overflow-y: auto;
-    max-height: 95vh;
   }
 }
