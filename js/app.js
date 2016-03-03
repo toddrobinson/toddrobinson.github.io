@@ -5,7 +5,7 @@
  */
 var app = angular.module('trApp', ['ngRoute']);
 /**
- * Routes for viws.
+ * Routes for views.
  * / ==> Home view/Hello!
  * /repos ==> repository view
  * /about ==> about view
