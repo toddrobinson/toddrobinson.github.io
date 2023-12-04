@@ -87,6 +87,10 @@ header.quickInfo {
   }
 }
 
+section .jobEntry {
+  margin-left: 1em;
+}
+
 @keyframes spin {
   from {transform: rotateY(0deg);}
   to {transform: rotateY(360deg);}
